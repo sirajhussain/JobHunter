@@ -1,0 +1,5 @@
+D:\Projects\JobHunter\JobHunter_Core\JobHunter.BusinessEntities\bin\Debug\JobHunter.BusinessEntities.dll
+D:\Projects\JobHunter\JobHunter_Core\JobHunter.BusinessEntities\bin\Debug\JobHunter.BusinessEntities.pdb
+D:\Projects\JobHunter\JobHunter_Core\JobHunter.BusinessEntities\obj\Debug\JobHunter.BusinessEntities.csprojResolveAssemblyReference.cache
+D:\Projects\JobHunter\JobHunter_Core\JobHunter.BusinessEntities\obj\Debug\JobHunter.BusinessEntities.dll
+D:\Projects\JobHunter\JobHunter_Core\JobHunter.BusinessEntities\obj\Debug\JobHunter.BusinessEntities.pdb

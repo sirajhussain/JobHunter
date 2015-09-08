@@ -1,0 +1,49 @@
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\bin\CRM.dll
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\bin\CRM.pdb
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\bin\Antlr3.Runtime.dll
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\bin\EntityFramework.dll
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\bin\Microsoft.Web.Infrastructure.dll
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\bin\Newtonsoft.Json.dll
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.Mvc.dll
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.Optimization.dll
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.Providers.dll
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.Razor.dll
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.WebPages.Deployment.dll
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.WebPages.dll
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.WebPages.Razor.dll
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\bin\WebGrease.dll
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\bin\EntityFramework.xml
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\bin\Newtonsoft.Json.xml
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.Mvc.xml
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.Razor.xml
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.WebPages.xml
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.WebPages.Deployment.xml
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.WebPages.Razor.xml
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\obj\Debug\CRM.dll
+c:\users\siraj.hussain\documents\visual studio 2012\Projects\CRM\CRM\obj\Debug\CRM.pdb
+D:\Projects\CRM\CRM\CRM\bin\CRM.dll
+D:\Projects\CRM\CRM\CRM\bin\CRM.pdb
+D:\Projects\CRM\CRM\CRM\bin\Antlr3.Runtime.dll
+D:\Projects\CRM\CRM\CRM\bin\EntityFramework.dll
+D:\Projects\CRM\CRM\CRM\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\CRM\CRM\CRM\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Projects\CRM\CRM\CRM\bin\Newtonsoft.Json.dll
+D:\Projects\CRM\CRM\CRM\bin\System.Web.Mvc.dll
+D:\Projects\CRM\CRM\CRM\bin\System.Web.Optimization.dll
+D:\Projects\CRM\CRM\CRM\bin\System.Web.Providers.dll
+D:\Projects\CRM\CRM\CRM\bin\System.Web.Razor.dll
+D:\Projects\CRM\CRM\CRM\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\CRM\CRM\CRM\bin\System.Web.WebPages.dll
+D:\Projects\CRM\CRM\CRM\bin\System.Web.WebPages.Razor.dll
+D:\Projects\CRM\CRM\CRM\bin\WebGrease.dll
+D:\Projects\CRM\CRM\CRM\bin\EntityFramework.xml
+D:\Projects\CRM\CRM\CRM\bin\Newtonsoft.Json.xml
+D:\Projects\CRM\CRM\CRM\bin\System.Web.Mvc.xml
+D:\Projects\CRM\CRM\CRM\bin\System.Web.Razor.xml
+D:\Projects\CRM\CRM\CRM\bin\System.Web.WebPages.xml
+D:\Projects\CRM\CRM\CRM\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\CRM\CRM\CRM\bin\System.Web.WebPages.Razor.xml
+D:\Projects\CRM\CRM\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache
+D:\Projects\CRM\CRM\CRM\obj\Debug\CRM.dll
+D:\Projects\CRM\CRM\CRM\obj\Debug\CRM.pdb

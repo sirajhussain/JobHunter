@@ -1,0 +1,8 @@
+D:\Projects\JobHunter\JobHunter_Core\JobHunter.DataModel\bin\Debug\JobHunter.DataModel.dll.config
+D:\Projects\JobHunter\JobHunter_Core\JobHunter.DataModel\bin\Debug\JobHunter.DataModel.dll
+D:\Projects\JobHunter\JobHunter_Core\JobHunter.DataModel\bin\Debug\JobHunter.DataModel.pdb
+D:\Projects\JobHunter\JobHunter_Core\JobHunter.DataModel\bin\Debug\EntityFramework.dll
+D:\Projects\JobHunter\JobHunter_Core\JobHunter.DataModel\bin\Debug\EntityFramework.xml
+D:\Projects\JobHunter\JobHunter_Core\JobHunter.DataModel\obj\Debug\JobHunter.DataModel.csprojResolveAssemblyReference.cache
+D:\Projects\JobHunter\JobHunter_Core\JobHunter.DataModel\obj\Debug\JobHunter.DataModel.dll
+D:\Projects\JobHunter\JobHunter_Core\JobHunter.DataModel\obj\Debug\JobHunter.DataModel.pdb

@@ -1,0 +1,1075 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="JobHunterModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="JobHunterModelStoreContainer">
+          <EntitySet Name="City" EntityType="JobHunterModel.Store.City" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Company" EntityType="JobHunterModel.Store.Company" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Country" EntityType="JobHunterModel.Store.Country" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Field" EntityType="JobHunterModel.Store.Field" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Job" EntityType="JobHunterModel.Store.Job" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Job_Location" EntityType="JobHunterModel.Store.Job_Location" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Job_Type" EntityType="JobHunterModel.Store.Job_Type" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="State" EntityType="JobHunterModel.Store.State" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Sub_Field" EntityType="JobHunterModel.Store.Sub_Field" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="JobHunterModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tag" EntityType="JobHunterModel.Store.Tag" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Token" EntityType="JobHunterModel.Store.Token" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="User" EntityType="JobHunterModel.Store.User" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="User_Role" EntityType="JobHunterModel.Store.User_Role" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="User_Tag" EntityType="JobHunterModel.Store.User_Tag" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_City_Country" Association="JobHunterModel.Store.FK_City_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="City" EntitySet="City" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Company_City" Association="JobHunterModel.Store.FK_Company_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="Company" EntitySet="Company" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Company_Country" Association="JobHunterModel.Store.FK_Company_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="Company" EntitySet="Company" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Job_Company" Association="JobHunterModel.Store.FK_Job_Company">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="Job" EntitySet="Job" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Job_Job_Location" Association="JobHunterModel.Store.FK_Job_Job_Location">
+            <End Role="Job_Location" EntitySet="Job_Location" />
+            <End Role="Job" EntitySet="Job" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Job_Job_Type" Association="JobHunterModel.Store.FK_Job_Job_Type">
+            <End Role="Job_Type" EntitySet="Job_Type" />
+            <End Role="Job" EntitySet="Job" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Job_Location_City" Association="JobHunterModel.Store.FK_Job_Location_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="Job_Location" EntitySet="Job_Location" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Job_Location_Country" Association="JobHunterModel.Store.FK_Job_Location_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="Job_Location" EntitySet="Job_Location" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sub_Field_Field" Association="JobHunterModel.Store.FK_Sub_Field_Field">
+            <End Role="Field" EntitySet="Field" />
+            <End Role="Sub_Field" EntitySet="Sub_Field" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tag_Field" Association="JobHunterModel.Store.FK_Tag_Field">
+            <End Role="Field" EntitySet="Field" />
+            <End Role="Tag" EntitySet="Tag" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tag_Sub_Field" Association="JobHunterModel.Store.FK_Tag_Sub_Field">
+            <End Role="Sub_Field" EntitySet="Sub_Field" />
+            <End Role="Tag" EntitySet="Tag" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Token_User" Association="JobHunterModel.Store.FK_Token_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Token" EntitySet="Token" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Company" Association="JobHunterModel.Store.FK_User_Company">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_User_Role" Association="JobHunterModel.Store.FK_User_User_Role">
+            <End Role="User_Role" EntitySet="User_Role" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Country_ID" Type="int" />
+          <Property Name="State_ID" Type="int" />
+          <Property Name="City_Name" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="Desciption" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="300" />
+          <Property Name="Address" Type="varchar" MaxLength="300" />
+          <Property Name="Phone 1" Type="varchar" MaxLength="200" />
+          <Property Name="Phone 2" Type="varchar" MaxLength="200" />
+          <Property Name="Fax" Type="varchar" MaxLength="200" />
+          <Property Name="Email" Type="varchar" MaxLength="300" />
+          <Property Name="URL" Type="varchar" MaxLength="300" />
+          <Property Name="City_ID" Type="int" />
+          <Property Name="State_ID" Type="int" />
+          <Property Name="Country_ID" Type="int" />
+          <Property Name="Ranking" Type="int" />
+          <Property Name="Created_On" Type="datetime" />
+          <Property Name="Modified_On" Type="datetime" />
+          <Property Name="Is_Archived" Type="bit" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Country_Name" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="Code" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Field">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Field_Name" Type="varchar" Nullable="false" MaxLength="300" />
+          <Property Name="Description" Type="varchar" MaxLength="500" />
+          <Property Name="Created_On" Type="datetime" />
+          <Property Name="Modified_On" Type="datetime" />
+          <Property Name="Is_Archived" Type="bit" />
+        </EntityType>
+        <EntityType Name="Job">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="varchar" MaxLength="500" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="Job_Location_ID" Type="int" />
+          <Property Name="Job_Type_ID" Type="int" />
+          <Property Name="User_ID" Type="int" Nullable="false" />
+          <Property Name="Company_ID" Type="int" />
+          <Property Name="Experience_Min" Type="int" />
+          <Property Name="Experience_Max" Type="int" />
+          <Property Name="Expiry_Date" Type="int" />
+          <Property Name="Email" Type="varchar" MaxLength="500" />
+          <Property Name="Phone" Type="varchar" MaxLength="500" />
+          <Property Name="SalaryRange" Type="varchar" MaxLength="500" />
+          <Property Name="Other" Type="varchar" MaxLength="500" />
+          <Property Name="Create_On" Type="nchar" MaxLength="10" />
+          <Property Name="Modified_On" Type="datetime" />
+          <Property Name="Is_Archived" Type="bit" />
+        </EntityType>
+        <EntityType Name="Job_Location">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="City_ID" Type="int" />
+          <Property Name="State_ID" Type="int" />
+          <Property Name="Country_ID" Type="int" />
+          <Property Name="Zip_Code_ID" Type="int" />
+          <Property Name="Detail" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Job_Type">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Job_Type_Name" Type="varchar" Nullable="false" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Country_ID" Type="int" Nullable="false" />
+          <Property Name="State_Name" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="Description" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Sub_Field">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Field_ID" Type="int" Nullable="false" />
+          <Property Name="Sub_Field_Name" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Tag">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Field_ID" Type="int" />
+          <Property Name="Sub_Field_ID" Type="int" />
+          <Property Name="Tag_Name" Type="varchar" Nullable="false" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="Token">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="User_ID" Type="int" />
+          <Property Name="AuthToken" Type="varchar" MaxLength="500" />
+          <Property Name="Issued_On" Type="datetime" />
+          <Property Name="Expires_On" Type="datetime" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Role_ID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="300" />
+          <Property Name="User_Name" Type="varchar" MaxLength="500" />
+          <Property Name="Password" Type="varchar" MaxLength="300" />
+          <Property Name="Gender" Type="varchar" MaxLength="50" />
+          <Property Name="BirthDate" Type="date" />
+          <Property Name="Email" Type="varchar" MaxLength="300" />
+          <Property Name="Address" Type="varchar" MaxLength="300" />
+          <Property Name="Company_ID" Type="int" />
+          <Property Name="Created_On" Type="datetime" />
+          <Property Name="Modified_On" Type="datetime" />
+          <Property Name="Is_Archived" Type="bit" />
+        </EntityType>
+        <EntityType Name="User_Role">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="Description" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="User_Tag">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="User_ID" Type="int" />
+          <Property Name="Tag_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_City_Country">
+          <End Role="Country" Type="JobHunterModel.Store.Country" Multiplicity="0..1" />
+          <End Role="City" Type="JobHunterModel.Store.City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="City">
+              <PropertyRef Name="Country_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Company_City">
+          <End Role="City" Type="JobHunterModel.Store.City" Multiplicity="0..1" />
+          <End Role="Company" Type="JobHunterModel.Store.Company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Company">
+              <PropertyRef Name="City_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Company_Country">
+          <End Role="Country" Type="JobHunterModel.Store.Country" Multiplicity="0..1" />
+          <End Role="Company" Type="JobHunterModel.Store.Company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Company">
+              <PropertyRef Name="Country_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Job_Company">
+          <End Role="Company" Type="JobHunterModel.Store.Company" Multiplicity="0..1" />
+          <End Role="Job" Type="JobHunterModel.Store.Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Job">
+              <PropertyRef Name="Company_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Job_Job_Location">
+          <End Role="Job_Location" Type="JobHunterModel.Store.Job_Location" Multiplicity="0..1" />
+          <End Role="Job" Type="JobHunterModel.Store.Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Job_Location">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Job">
+              <PropertyRef Name="Job_Location_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Job_Job_Type">
+          <End Role="Job_Type" Type="JobHunterModel.Store.Job_Type" Multiplicity="0..1" />
+          <End Role="Job" Type="JobHunterModel.Store.Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Job_Type">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Job">
+              <PropertyRef Name="Job_Type_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Job_Location_City">
+          <End Role="City" Type="JobHunterModel.Store.City" Multiplicity="0..1" />
+          <End Role="Job_Location" Type="JobHunterModel.Store.Job_Location" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Job_Location">
+              <PropertyRef Name="City_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Job_Location_Country">
+          <End Role="Country" Type="JobHunterModel.Store.Country" Multiplicity="0..1" />
+          <End Role="Job_Location" Type="JobHunterModel.Store.Job_Location" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Job_Location">
+              <PropertyRef Name="Country_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sub_Field_Field">
+          <End Role="Field" Type="JobHunterModel.Store.Field" Multiplicity="1" />
+          <End Role="Sub_Field" Type="JobHunterModel.Store.Sub_Field" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Field">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Sub_Field">
+              <PropertyRef Name="Field_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tag_Field">
+          <End Role="Field" Type="JobHunterModel.Store.Field" Multiplicity="0..1" />
+          <End Role="Tag" Type="JobHunterModel.Store.Tag" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Field">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tag">
+              <PropertyRef Name="Field_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tag_Sub_Field">
+          <End Role="Sub_Field" Type="JobHunterModel.Store.Sub_Field" Multiplicity="0..1" />
+          <End Role="Tag" Type="JobHunterModel.Store.Tag" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sub_Field">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tag">
+              <PropertyRef Name="Sub_Field_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Token_User">
+          <End Role="User" Type="JobHunterModel.Store.User" Multiplicity="0..1" />
+          <End Role="Token" Type="JobHunterModel.Store.Token" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Token">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Company">
+          <End Role="Company" Type="JobHunterModel.Store.Company" Multiplicity="0..1" />
+          <End Role="User" Type="JobHunterModel.Store.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="Company_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_User_Role">
+          <End Role="User_Role" Type="JobHunterModel.Store.User_Role" Multiplicity="1" />
+          <End Role="User" Type="JobHunterModel.Store.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_Role">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="Role_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="JobHunterModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="JobHunterEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Cities" EntityType="JobHunterModel.City" />
+          <EntitySet Name="Companies" EntityType="JobHunterModel.Company" />
+          <EntitySet Name="Countries" EntityType="JobHunterModel.Country" />
+          <EntitySet Name="Fields" EntityType="JobHunterModel.Field" />
+          <EntitySet Name="Jobs" EntityType="JobHunterModel.Job" />
+          <EntitySet Name="Job_Location" EntityType="JobHunterModel.Job_Location" />
+          <EntitySet Name="Job_Type" EntityType="JobHunterModel.Job_Type" />
+          <EntitySet Name="States" EntityType="JobHunterModel.State" />
+          <EntitySet Name="Sub_Field" EntityType="JobHunterModel.Sub_Field" />
+          <EntitySet Name="sysdiagrams" EntityType="JobHunterModel.sysdiagram" />
+          <EntitySet Name="Tags" EntityType="JobHunterModel.Tag" />
+          <EntitySet Name="Users" EntityType="JobHunterModel.User" />
+          <EntitySet Name="User_Role" EntityType="JobHunterModel.User_Role" />
+          <AssociationSet Name="FK_City_Country" Association="JobHunterModel.FK_City_Country">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="City" EntitySet="Cities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Company_City" Association="JobHunterModel.FK_Company_City">
+            <End Role="City" EntitySet="Cities" />
+            <End Role="Company" EntitySet="Companies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Job_Location_City" Association="JobHunterModel.FK_Job_Location_City">
+            <End Role="City" EntitySet="Cities" />
+            <End Role="Job_Location" EntitySet="Job_Location" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Company_Country" Association="JobHunterModel.FK_Company_Country">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="Company" EntitySet="Companies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Job_Company" Association="JobHunterModel.FK_Job_Company">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="Job" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Company" Association="JobHunterModel.FK_User_Company">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Job_Location_Country" Association="JobHunterModel.FK_Job_Location_Country">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="Job_Location" EntitySet="Job_Location" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sub_Field_Field" Association="JobHunterModel.FK_Sub_Field_Field">
+            <End Role="Field" EntitySet="Fields" />
+            <End Role="Sub_Field" EntitySet="Sub_Field" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tag_Field" Association="JobHunterModel.FK_Tag_Field">
+            <End Role="Field" EntitySet="Fields" />
+            <End Role="Tag" EntitySet="Tags" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Job_Job_Location" Association="JobHunterModel.FK_Job_Job_Location">
+            <End Role="Job_Location" EntitySet="Job_Location" />
+            <End Role="Job" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Job_Job_Type" Association="JobHunterModel.FK_Job_Job_Type">
+            <End Role="Job_Type" EntitySet="Job_Type" />
+            <End Role="Job" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tag_Sub_Field" Association="JobHunterModel.FK_Tag_Sub_Field">
+            <End Role="Sub_Field" EntitySet="Sub_Field" />
+            <End Role="Tag" EntitySet="Tags" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_User_Role" Association="JobHunterModel.FK_User_User_Role">
+            <End Role="User_Role" EntitySet="User_Role" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <EntitySet Name="Tokens" EntityType="JobHunterModel.Token" />
+          <AssociationSet Name="FK_Token_User" Association="JobHunterModel.FK_Token_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Token" EntitySet="Tokens" />
+          </AssociationSet>
+          <EntitySet Name="User_Tag" EntityType="JobHunterModel.User_Tag" />
+        </EntityContainer>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Country_ID" Type="Int32" />
+          <Property Name="State_ID" Type="Int32" />
+          <Property Name="City_Name" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Desciption" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Country" Relationship="JobHunterModel.FK_City_Country" FromRole="City" ToRole="Country" />
+          <NavigationProperty Name="Companies" Relationship="JobHunterModel.FK_Company_City" FromRole="City" ToRole="Company" />
+          <NavigationProperty Name="Job_Location" Relationship="JobHunterModel.FK_Job_Location_City" FromRole="City" ToRole="Job_Location" />
+        </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="Phone_1" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="Phone_2" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="Fax" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="URL" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="City_ID" Type="Int32" />
+          <Property Name="State_ID" Type="Int32" />
+          <Property Name="Country_ID" Type="Int32" />
+          <Property Name="Ranking" Type="Int32" />
+          <Property Name="Created_On" Type="DateTime" Precision="3" />
+          <Property Name="Modified_On" Type="DateTime" Precision="3" />
+          <Property Name="Is_Archived" Type="Boolean" />
+          <NavigationProperty Name="City" Relationship="JobHunterModel.FK_Company_City" FromRole="Company" ToRole="City" />
+          <NavigationProperty Name="Country" Relationship="JobHunterModel.FK_Company_Country" FromRole="Company" ToRole="Country" />
+          <NavigationProperty Name="Jobs" Relationship="JobHunterModel.FK_Job_Company" FromRole="Company" ToRole="Job" />
+          <NavigationProperty Name="Users" Relationship="JobHunterModel.FK_User_Company" FromRole="Company" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Country_Name" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Code" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Cities" Relationship="JobHunterModel.FK_City_Country" FromRole="Country" ToRole="City" />
+          <NavigationProperty Name="Companies" Relationship="JobHunterModel.FK_Company_Country" FromRole="Country" ToRole="Company" />
+          <NavigationProperty Name="Job_Location" Relationship="JobHunterModel.FK_Job_Location_Country" FromRole="Country" ToRole="Job_Location" />
+        </EntityType>
+        <EntityType Name="Field">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Field_Name" Type="String" Nullable="false" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Created_On" Type="DateTime" Precision="3" />
+          <Property Name="Modified_On" Type="DateTime" Precision="3" />
+          <Property Name="Is_Archived" Type="Boolean" />
+          <NavigationProperty Name="Sub_Field" Relationship="JobHunterModel.FK_Sub_Field_Field" FromRole="Field" ToRole="Sub_Field" />
+          <NavigationProperty Name="Tags" Relationship="JobHunterModel.FK_Tag_Field" FromRole="Field" ToRole="Tag" />
+        </EntityType>
+        <EntityType Name="Job">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Job_Location_ID" Type="Int32" />
+          <Property Name="Job_Type_ID" Type="Int32" />
+          <Property Name="User_ID" Type="Int32" Nullable="false" />
+          <Property Name="Company_ID" Type="Int32" />
+          <Property Name="Experience_Min" Type="Int32" />
+          <Property Name="Experience_Max" Type="Int32" />
+          <Property Name="Expiry_Date" Type="Int32" />
+          <Property Name="Email" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="SalaryRange" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Other" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Create_On" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="Modified_On" Type="DateTime" Precision="3" />
+          <Property Name="Is_Archived" Type="Boolean" />
+          <NavigationProperty Name="Company" Relationship="JobHunterModel.FK_Job_Company" FromRole="Job" ToRole="Company" />
+          <NavigationProperty Name="Job_Location" Relationship="JobHunterModel.FK_Job_Job_Location" FromRole="Job" ToRole="Job_Location" />
+          <NavigationProperty Name="Job_Type" Relationship="JobHunterModel.FK_Job_Job_Type" FromRole="Job" ToRole="Job_Type" />
+        </EntityType>
+        <EntityType Name="Job_Location">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="City_ID" Type="Int32" />
+          <Property Name="State_ID" Type="Int32" />
+          <Property Name="Country_ID" Type="Int32" />
+          <Property Name="Zip_Code_ID" Type="Int32" />
+          <Property Name="Detail" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="City" Relationship="JobHunterModel.FK_Job_Location_City" FromRole="Job_Location" ToRole="City" />
+          <NavigationProperty Name="Country" Relationship="JobHunterModel.FK_Job_Location_Country" FromRole="Job_Location" ToRole="Country" />
+          <NavigationProperty Name="Jobs" Relationship="JobHunterModel.FK_Job_Job_Location" FromRole="Job_Location" ToRole="Job" />
+        </EntityType>
+        <EntityType Name="Job_Type">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Job_Type_Name" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Jobs" Relationship="JobHunterModel.FK_Job_Job_Type" FromRole="Job_Type" ToRole="Job" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Country_ID" Type="Int32" Nullable="false" />
+          <Property Name="State_Name" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Sub_Field">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Field_ID" Type="Int32" Nullable="false" />
+          <Property Name="Sub_Field_Name" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Field" Relationship="JobHunterModel.FK_Sub_Field_Field" FromRole="Sub_Field" ToRole="Field" />
+          <NavigationProperty Name="Tags" Relationship="JobHunterModel.FK_Tag_Sub_Field" FromRole="Sub_Field" ToRole="Tag" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Tag">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Field_ID" Type="Int32" />
+          <Property Name="Sub_Field_ID" Type="Int32" />
+          <Property Name="Tag_Name" Type="String" Nullable="false" MaxLength="300" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Field" Relationship="JobHunterModel.FK_Tag_Field" FromRole="Tag" ToRole="Field" />
+          <NavigationProperty Name="Sub_Field" Relationship="JobHunterModel.FK_Tag_Sub_Field" FromRole="Tag" ToRole="Sub_Field" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Role_ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="User_Name" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="Gender" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BirthDate" Type="DateTime" Precision="0" />
+          <Property Name="Email" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="Company_ID" Type="Int32" />
+          <Property Name="Created_On" Type="DateTime" Precision="3" />
+          <Property Name="Modified_On" Type="DateTime" Precision="3" />
+          <Property Name="Is_Archived" Type="Boolean" />
+          <NavigationProperty Name="Company" Relationship="JobHunterModel.FK_User_Company" FromRole="User" ToRole="Company" />
+          <NavigationProperty Name="User_Role" Relationship="JobHunterModel.FK_User_User_Role" FromRole="User" ToRole="User_Role" />
+          <NavigationProperty Name="Tokens" Relationship="JobHunterModel.FK_Token_User" FromRole="User" ToRole="Token" />
+        </EntityType>
+        <EntityType Name="User_Role">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Users" Relationship="JobHunterModel.FK_User_User_Role" FromRole="User_Role" ToRole="User" />
+        </EntityType>
+        <Association Name="FK_City_Country">
+          <End Role="Country" Type="JobHunterModel.Country" Multiplicity="0..1" />
+          <End Role="City" Type="JobHunterModel.City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="City">
+              <PropertyRef Name="Country_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Company_City">
+          <End Role="City" Type="JobHunterModel.City" Multiplicity="0..1" />
+          <End Role="Company" Type="JobHunterModel.Company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Company">
+              <PropertyRef Name="City_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Job_Location_City">
+          <End Role="City" Type="JobHunterModel.City" Multiplicity="0..1" />
+          <End Role="Job_Location" Type="JobHunterModel.Job_Location" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Job_Location">
+              <PropertyRef Name="City_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Company_Country">
+          <End Role="Country" Type="JobHunterModel.Country" Multiplicity="0..1" />
+          <End Role="Company" Type="JobHunterModel.Company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Company">
+              <PropertyRef Name="Country_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Job_Company">
+          <End Role="Company" Type="JobHunterModel.Company" Multiplicity="0..1" />
+          <End Role="Job" Type="JobHunterModel.Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Job">
+              <PropertyRef Name="Company_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Company">
+          <End Role="Company" Type="JobHunterModel.Company" Multiplicity="0..1" />
+          <End Role="User" Type="JobHunterModel.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="Company_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Job_Location_Country">
+          <End Role="Country" Type="JobHunterModel.Country" Multiplicity="0..1" />
+          <End Role="Job_Location" Type="JobHunterModel.Job_Location" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Job_Location">
+              <PropertyRef Name="Country_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sub_Field_Field">
+          <End Role="Field" Type="JobHunterModel.Field" Multiplicity="1" />
+          <End Role="Sub_Field" Type="JobHunterModel.Sub_Field" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Field">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Sub_Field">
+              <PropertyRef Name="Field_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tag_Field">
+          <End Role="Field" Type="JobHunterModel.Field" Multiplicity="0..1" />
+          <End Role="Tag" Type="JobHunterModel.Tag" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Field">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tag">
+              <PropertyRef Name="Field_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Job_Job_Location">
+          <End Role="Job_Location" Type="JobHunterModel.Job_Location" Multiplicity="0..1" />
+          <End Role="Job" Type="JobHunterModel.Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Job_Location">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Job">
+              <PropertyRef Name="Job_Location_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Job_Job_Type">
+          <End Role="Job_Type" Type="JobHunterModel.Job_Type" Multiplicity="0..1" />
+          <End Role="Job" Type="JobHunterModel.Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Job_Type">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Job">
+              <PropertyRef Name="Job_Type_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tag_Sub_Field">
+          <End Role="Sub_Field" Type="JobHunterModel.Sub_Field" Multiplicity="0..1" />
+          <End Role="Tag" Type="JobHunterModel.Tag" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sub_Field">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tag">
+              <PropertyRef Name="Sub_Field_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_User_Role">
+          <End Role="User_Role" Type="JobHunterModel.User_Role" Multiplicity="1" />
+          <End Role="User" Type="JobHunterModel.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_Role">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="Role_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Token">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="User_ID" />
+          <Property Type="String" Name="AuthToken" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Issued_On" Precision="3" />
+          <Property Type="DateTime" Name="Expires_On" Precision="3" />
+          <NavigationProperty Name="User" Relationship="JobHunterModel.FK_Token_User" FromRole="Token" ToRole="User" />
+        </EntityType>
+        <Association Name="FK_Token_User">
+          <End Type="JobHunterModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="JobHunterModel.Token" Role="Token" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Token">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="User_Tag">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="User_ID" />
+          <Property Type="Int32" Name="Tag_ID" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="JobHunterModelStoreContainer" CdmEntityContainer="JobHunterEntities">
+          <EntitySetMapping Name="Cities">
+            <EntityTypeMapping TypeName="JobHunterModel.City">
+              <MappingFragment StoreEntitySet="City">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+                <ScalarProperty Name="State_ID" ColumnName="State_ID" />
+                <ScalarProperty Name="City_Name" ColumnName="City_Name" />
+                <ScalarProperty Name="Desciption" ColumnName="Desciption" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Companies">
+            <EntityTypeMapping TypeName="JobHunterModel.Company">
+              <MappingFragment StoreEntitySet="Company">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone_1" ColumnName="Phone 1" />
+                <ScalarProperty Name="Phone_2" ColumnName="Phone 2" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="City_ID" ColumnName="City_ID" />
+                <ScalarProperty Name="State_ID" ColumnName="State_ID" />
+                <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+                <ScalarProperty Name="Ranking" ColumnName="Ranking" />
+                <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+                <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+                <ScalarProperty Name="Is_Archived" ColumnName="Is_Archived" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Countries">
+            <EntityTypeMapping TypeName="JobHunterModel.Country">
+              <MappingFragment StoreEntitySet="Country">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Country_Name" ColumnName="Country_Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Fields">
+            <EntityTypeMapping TypeName="JobHunterModel.Field">
+              <MappingFragment StoreEntitySet="Field">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Field_Name" ColumnName="Field_Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+                <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+                <ScalarProperty Name="Is_Archived" ColumnName="Is_Archived" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Jobs">
+            <EntityTypeMapping TypeName="JobHunterModel.Job">
+              <MappingFragment StoreEntitySet="Job">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Job_Location_ID" ColumnName="Job_Location_ID" />
+                <ScalarProperty Name="Job_Type_ID" ColumnName="Job_Type_ID" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Company_ID" ColumnName="Company_ID" />
+                <ScalarProperty Name="Experience_Min" ColumnName="Experience_Min" />
+                <ScalarProperty Name="Experience_Max" ColumnName="Experience_Max" />
+                <ScalarProperty Name="Expiry_Date" ColumnName="Expiry_Date" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="SalaryRange" ColumnName="SalaryRange" />
+                <ScalarProperty Name="Other" ColumnName="Other" />
+                <ScalarProperty Name="Create_On" ColumnName="Create_On" />
+                <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+                <ScalarProperty Name="Is_Archived" ColumnName="Is_Archived" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Job_Location">
+            <EntityTypeMapping TypeName="JobHunterModel.Job_Location">
+              <MappingFragment StoreEntitySet="Job_Location">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="City_ID" ColumnName="City_ID" />
+                <ScalarProperty Name="State_ID" ColumnName="State_ID" />
+                <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+                <ScalarProperty Name="Zip_Code_ID" ColumnName="Zip_Code_ID" />
+                <ScalarProperty Name="Detail" ColumnName="Detail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Job_Type">
+            <EntityTypeMapping TypeName="JobHunterModel.Job_Type">
+              <MappingFragment StoreEntitySet="Job_Type">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Job_Type_Name" ColumnName="Job_Type_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="States">
+            <EntityTypeMapping TypeName="JobHunterModel.State">
+              <MappingFragment StoreEntitySet="State">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+                <ScalarProperty Name="State_Name" ColumnName="State_Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sub_Field">
+            <EntityTypeMapping TypeName="JobHunterModel.Sub_Field">
+              <MappingFragment StoreEntitySet="Sub_Field">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Field_ID" ColumnName="Field_ID" />
+                <ScalarProperty Name="Sub_Field_Name" ColumnName="Sub_Field_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="JobHunterModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tags">
+            <EntityTypeMapping TypeName="JobHunterModel.Tag">
+              <MappingFragment StoreEntitySet="Tag">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Field_ID" ColumnName="Field_ID" />
+                <ScalarProperty Name="Sub_Field_ID" ColumnName="Sub_Field_ID" />
+                <ScalarProperty Name="Tag_Name" ColumnName="Tag_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="JobHunterModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Role_ID" ColumnName="Role_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Company_ID" ColumnName="Company_ID" />
+                <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+                <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+                <ScalarProperty Name="Is_Archived" ColumnName="Is_Archived" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User_Role">
+            <EntityTypeMapping TypeName="JobHunterModel.User_Role">
+              <MappingFragment StoreEntitySet="User_Role">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tokens">
+            <EntityTypeMapping TypeName="JobHunterModel.Token">
+              <MappingFragment StoreEntitySet="Token">
+                <ScalarProperty Name="Expires_On" ColumnName="Expires_On" />
+                <ScalarProperty Name="Issued_On" ColumnName="Issued_On" />
+                <ScalarProperty Name="AuthToken" ColumnName="AuthToken" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User_Tag">
+            <EntityTypeMapping TypeName="JobHunterModel.User_Tag">
+              <MappingFragment StoreEntitySet="User_Tag">
+                <ScalarProperty Name="Tag_ID" ColumnName="Tag_ID" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

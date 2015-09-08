@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b3b36b9f9cc744138a4a0c4ec72c6bbd" Name="Diagram1">
+        <EntityTypeShape EntityType="JobHunterModel.City" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobHunterModel.Company" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobHunterModel.Country" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobHunterModel.Field" Width="1.5" PointX="9.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobHunterModel.Job" Width="1.5" PointX="10.5" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobHunterModel.Job_Location" Width="1.5" PointX="8.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobHunterModel.Job_Type" Width="1.5" PointX="8.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobHunterModel.State" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobHunterModel.Sub_Field" Width="1.5" PointX="12" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobHunterModel.sysdiagram" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobHunterModel.Tag" Width="1.5" PointX="14.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobHunterModel.User" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobHunterModel.User_Role" Width="1.5" PointX="5.25" PointY="2.125" IsExpanded="true" />
+        <AssociationConnector Association="JobHunterModel.FK_City_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="JobHunterModel.FK_Company_City" ManuallyRouted="false" />
+        <AssociationConnector Association="JobHunterModel.FK_Job_Location_City" ManuallyRouted="false" />
+        <AssociationConnector Association="JobHunterModel.FK_Company_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="JobHunterModel.FK_Job_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="JobHunterModel.FK_User_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="JobHunterModel.FK_Job_Location_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="JobHunterModel.FK_Sub_Field_Field" ManuallyRouted="false" />
+        <AssociationConnector Association="JobHunterModel.FK_Tag_Field" ManuallyRouted="false" />
+        <AssociationConnector Association="JobHunterModel.FK_Job_Job_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="JobHunterModel.FK_Job_Job_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="JobHunterModel.FK_Tag_Sub_Field" ManuallyRouted="false" />
+        <AssociationConnector Association="JobHunterModel.FK_User_User_Role" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="JobHunterModel.Token" Width="1.5" PointX="10.0296969553594" PointY="2.1565034399537852" />
+        <AssociationConnector Association="JobHunterModel.FK_Token_User" />
+        <EntityTypeShape EntityType="JobHunterModel.User_Tag" Width="1.5" PointX="0.17655612909074692" PointY="21.561817939189179" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

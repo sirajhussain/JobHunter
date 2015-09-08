@@ -1,0 +1,16 @@
+D:\Projects\JobHunter\JobHunter_Core\BusinessServices\bin\Debug\AutoMapper.Net4.dll
+D:\Projects\JobHunter\JobHunter_Core\BusinessServices\bin\Debug\JobHunter.BusinessServices.dll
+D:\Projects\JobHunter\JobHunter_Core\BusinessServices\bin\Debug\JobHunter.BusinessServices.pdb
+D:\Projects\JobHunter\JobHunter_Core\BusinessServices\bin\Debug\AutoMapper.dll
+D:\Projects\JobHunter\JobHunter_Core\BusinessServices\bin\Debug\JobHunter.BusinessEntities.dll
+D:\Projects\JobHunter\JobHunter_Core\BusinessServices\bin\Debug\JobHunter.DataModel.dll
+D:\Projects\JobHunter\JobHunter_Core\BusinessServices\bin\Debug\EntityFramework.dll
+D:\Projects\JobHunter\JobHunter_Core\BusinessServices\bin\Debug\JobHunter.BusinessEntities.pdb
+D:\Projects\JobHunter\JobHunter_Core\BusinessServices\bin\Debug\JobHunter.DataModel.pdb
+D:\Projects\JobHunter\JobHunter_Core\BusinessServices\bin\Debug\AutoMapper.pdb
+D:\Projects\JobHunter\JobHunter_Core\BusinessServices\bin\Debug\AutoMapper.xml
+D:\Projects\JobHunter\JobHunter_Core\BusinessServices\bin\Debug\AutoMapper.Net4.pdb
+D:\Projects\JobHunter\JobHunter_Core\BusinessServices\bin\Debug\EntityFramework.xml
+D:\Projects\JobHunter\JobHunter_Core\BusinessServices\obj\Debug\JobHunter.BusinessServices.csprojResolveAssemblyReference.cache
+D:\Projects\JobHunter\JobHunter_Core\BusinessServices\obj\Debug\JobHunter.BusinessServices.dll
+D:\Projects\JobHunter\JobHunter_Core\BusinessServices\obj\Debug\JobHunter.BusinessServices.pdb

@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JobHunterModelStoreContainer" CdmEntityContainer="JobHunterEntities">
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="JobHunterModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+          <ScalarProperty Name="State_ID" ColumnName="State_ID" />
+          <ScalarProperty Name="City_Name" ColumnName="City_Name" />
+          <ScalarProperty Name="Desciption" ColumnName="Desciption" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="JobHunterModel.Company">
+        <MappingFragment StoreEntitySet="Company">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone_1" ColumnName="Phone 1" />
+          <ScalarProperty Name="Phone_2" ColumnName="Phone 2" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="City_ID" ColumnName="City_ID" />
+          <ScalarProperty Name="State_ID" ColumnName="State_ID" />
+          <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+          <ScalarProperty Name="Ranking" ColumnName="Ranking" />
+          <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+          <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+          <ScalarProperty Name="Is_Archived" ColumnName="Is_Archived" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="JobHunterModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Country_Name" ColumnName="Country_Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fields">
+      <EntityTypeMapping TypeName="JobHunterModel.Field">
+        <MappingFragment StoreEntitySet="Field">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Field_Name" ColumnName="Field_Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+          <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+          <ScalarProperty Name="Is_Archived" ColumnName="Is_Archived" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jobs">
+      <EntityTypeMapping TypeName="JobHunterModel.Job">
+        <MappingFragment StoreEntitySet="Job">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Job_Location_ID" ColumnName="Job_Location_ID" />
+          <ScalarProperty Name="Job_Type_ID" ColumnName="Job_Type_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Company_ID" ColumnName="Company_ID" />
+          <ScalarProperty Name="Experience_Min" ColumnName="Experience_Min" />
+          <ScalarProperty Name="Experience_Max" ColumnName="Experience_Max" />
+          <ScalarProperty Name="Expiry_Date" ColumnName="Expiry_Date" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="SalaryRange" ColumnName="SalaryRange" />
+          <ScalarProperty Name="Other" ColumnName="Other" />
+          <ScalarProperty Name="Create_On" ColumnName="Create_On" />
+          <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+          <ScalarProperty Name="Is_Archived" ColumnName="Is_Archived" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Job_Location">
+      <EntityTypeMapping TypeName="JobHunterModel.Job_Location">
+        <MappingFragment StoreEntitySet="Job_Location">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="City_ID" ColumnName="City_ID" />
+          <ScalarProperty Name="State_ID" ColumnName="State_ID" />
+          <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+          <ScalarProperty Name="Zip_Code_ID" ColumnName="Zip_Code_ID" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Job_Type">
+      <EntityTypeMapping TypeName="JobHunterModel.Job_Type">
+        <MappingFragment StoreEntitySet="Job_Type">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Job_Type_Name" ColumnName="Job_Type_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="JobHunterModel.State">
+        <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+          <ScalarProperty Name="State_Name" ColumnName="State_Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sub_Field">
+      <EntityTypeMapping TypeName="JobHunterModel.Sub_Field">
+        <MappingFragment StoreEntitySet="Sub_Field">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Field_ID" ColumnName="Field_ID" />
+          <ScalarProperty Name="Sub_Field_Name" ColumnName="Sub_Field_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="JobHunterModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tags">
+      <EntityTypeMapping TypeName="JobHunterModel.Tag">
+        <MappingFragment StoreEntitySet="Tag">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Field_ID" ColumnName="Field_ID" />
+          <ScalarProperty Name="Sub_Field_ID" ColumnName="Sub_Field_ID" />
+          <ScalarProperty Name="Tag_Name" ColumnName="Tag_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="JobHunterModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Role_ID" ColumnName="Role_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Company_ID" ColumnName="Company_ID" />
+          <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+          <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+          <ScalarProperty Name="Is_Archived" ColumnName="Is_Archived" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Role">
+      <EntityTypeMapping TypeName="JobHunterModel.User_Role">
+        <MappingFragment StoreEntitySet="User_Role">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tokens">
+      <EntityTypeMapping TypeName="JobHunterModel.Token">
+        <MappingFragment StoreEntitySet="Token">
+          <ScalarProperty Name="Expires_On" ColumnName="Expires_On" />
+          <ScalarProperty Name="Issued_On" ColumnName="Issued_On" />
+          <ScalarProperty Name="AuthToken" ColumnName="AuthToken" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Tag">
+      <EntityTypeMapping TypeName="JobHunterModel.User_Tag">
+        <MappingFragment StoreEntitySet="User_Tag">
+          <ScalarProperty Name="Tag_ID" ColumnName="Tag_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
